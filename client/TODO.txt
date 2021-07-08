@@ -1,0 +1,2 @@
+1. Set up src folder
+2. Index.jsx will render App.jsx

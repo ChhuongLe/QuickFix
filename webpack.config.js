@@ -5,10 +5,10 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './public/dist'),
     clean: {
-      keep: 'index.html'
-    }
+      keep: 'index.html',
+    },
   },
   module: {
     rules: [
@@ -34,5 +34,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      'react-native$': 'react-native-web',
+    },
   },
 };

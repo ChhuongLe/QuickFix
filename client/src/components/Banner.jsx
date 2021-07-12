@@ -11,8 +11,8 @@ const RowContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'Roboto';
   font-size: 3em;
+  padding:40px;
 `;
 
 // Sytled components for banner

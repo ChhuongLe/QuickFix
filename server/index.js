@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
-const config = require('../config');
+const bodyParser = require('body-parser');
+
+const controller = require('./controller');
+const helpers = require('./router');
 
 const app = express();
 const port = 3000;
@@ -12,10 +15,12 @@ const port = 3000;
 // Will be an array, use map function to change format to fit api call
 
 app.use(express.static(path.join(__dirname, '../public/dist')));
+app.use(bodyParser.json());
 
-app.get('/yes', (req, res) => {
-  res.send('Hello World!');
-});
+app.get('/chicken', controller);
+app.get('/beef', controller);
+app.get('/vegan', controller);
+app.get('/vegetarian', controller);
 
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import ReactPlayer from 'react-player';
 
 // Improvment: Make it so there are more options
 const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: relative;
   right: 0;
   left: 0;
@@ -12,21 +14,6 @@ const Container = styled.div`
   justify-content: center;
   width: 50vw;
   height: 50vh;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-
-  .box {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 40px;
-    font-size: 2em;
-    max-height: 10vh;
-    max-width: 10vw;
-    :hover {
-      opacity: 0.8;
-      cursor: pointer;
-    }
   }
 `;
 
@@ -85,7 +72,7 @@ const RowContainer = styled.div`
   }
 `;
 
-const Ingredients = () => {
+const recipes = () => {
   const [ingredients, setIngredients] = useState([]);
   const [name, setName] = useState('+');
   const [showModal, setShowModal] = useState(false);
@@ -128,11 +115,14 @@ const Ingredients = () => {
   return (
     <>
       {modal}
+
       <Container>
-        <button className="box" name="add" onClick={handleClick}>{name}</button>
+        <ReactPlayer url="https://www.youtube.com/watch?v=9i4SKHbhbqk" />
+        <br />
+        <div className="message">Fast Food Done Right with Gordon Ramsay</div>
       </Container>
     </>
   );
 };
 
-export default Ingredients;
+export default recipes;

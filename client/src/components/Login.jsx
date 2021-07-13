@@ -19,6 +19,7 @@ const Container = styled.div`
 const Form = styled.form`
   display: flex;
   poisition: relative;
+  border-radius: 10px;
   flex-direciton: column;
   justify-content: center;
   margin-top: 100px;
@@ -43,21 +44,23 @@ const Form = styled.form`
     padding: 10px;
     width: 25vw;
     background-color: rgb(234 162 162/ 0.7) ;
+    border-radius: 20px;
     :hover {
       cursor: pointer;
       opacity: 0.8;
+      transition: 5ms;
     }
   }
 `;
 
-const Login = ({ setLogin, createAccount }) => {
+const Login = ({ setScreen, createAccount }) => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [create, setCreate] = useState(false);
 
   const handleSubmit = () => {
-    setLogin('ingredientScreen');
+    setScreen('ingredientScreen');
     setLoggedIn(!loggedIn);
   };
 
@@ -71,7 +74,7 @@ const Login = ({ setLogin, createAccount }) => {
       <Header>Sign in</Header>
       <Container>
         <Form className="login" onSubmit={handleSubmit}>
-          <p>
+          <div>
             <br />
             <br />
             <label className="username">Username: </label>
@@ -92,7 +95,7 @@ const Login = ({ setLogin, createAccount }) => {
             <br />
             <p className="message">Not Registered?</p>
             <button className="submit" onClick={handleCreate}>Create an account</button>
-          </p>
+          </div>
         </Form>
       </Container>
     </div>

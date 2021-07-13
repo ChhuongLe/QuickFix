@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Login from './Login';
-import Banner from './Banner';
-import Ingredients from './Ingredients';
+import Navbar from './Navbar';
+import Homepage from './Homepage';
+import Recipes from './Recipes';
 import Create from './Create';
+import axios from 'axios';
 
 const Container = styled.div`
   background-color: #77DD77;
@@ -16,14 +18,31 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ingredients: [],
+      chickenRecipies: [],
       screen: 'loginScreen',
     };
-    this.setLogin = this.setLogin.bind(this);
+    this.setScreen = this.setScreen.bind(this);
     this.createAccount = this.createAccount.bind(this);
+    this.getChickRecipes = this.getChickRecipes.bind(this);
   }
 
-  setLogin(value) {
+  componentDidMount() {
+    this.getChickRecipes();
+  }
+
+  getChickRecipes() {
+    axios.get('/chicken')
+      .then((res) => {
+        this.setState({
+          chickenRecipies: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  setScreen(value) {
     this.setState({
       screen: value,
     });
@@ -36,7 +55,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { screen } = this.state;
+    const { screen, chickenRecipies } = this.state;
     if (screen === 'registerScreen') {
       return (
         <Container>
@@ -47,14 +66,21 @@ class App extends React.Component {
     if (screen === 'loginScreen') {
       return (
         <Container>
-          <Login setLogin={this.setLogin} createAccount={this.createAccount} />
+          <Login setScreen={this.setScreen} createAccount={this.createAccount} />
+        </Container>
+      );
+    }
+    if (screen === 'recipesScreen') {
+      return (
+        <Container>
+          <Recipes chickenRecipies={this.chickenRecipies} />
         </Container>
       );
     }
     return (
       <Container>
-        <Banner />
-        <Ingredients />
+        <Navbar setScreen={this.setScreen} />
+        <Homepage />
       </Container>
     );
   }

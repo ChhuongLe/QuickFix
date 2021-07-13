@@ -15,19 +15,6 @@ const Container = styled.div`
   }
 `;
 
-const Modal = styled.div`
-  position: fixed;
-  z-index: 1;
-  inset: 0px;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  transition-duration: 4s;
-  justify-content: center;
-  background-color: rgba(0,0,0,0.8);
-  display: flex;
-`;
-
 const Recipes = (chickenRecipes) => {
   const [modal, setModal] = useState(false);
 

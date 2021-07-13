@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+import Labels from './Labels';
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +15,7 @@ const Container = styled.div`
   padding: 14px;
   margin: 1rem;
   background-color: #ffecbd;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.3);
   :hover {
     cursor: pointer;
   }
@@ -38,11 +41,31 @@ const Modal = styled.div`
   display: flex;
 `;
 
+const StyledInformation = styled.div`
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  border: solid;
+  background-color: white;
+  min-width: 30%;
+  min-height:30%;
+  padding: 2%;
+  left: 50%;
+  right: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, 50%);
+  .message {
+    text-decoration: underline;
+  }
+`;
+
 const RecipeCard = ({ element }) => {
-  const [modal, setModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const recipeName = element.recipe.label;
   const image = element.recipe.image;
+  // const healthLabels = element.recipe.healthLabels;
+  const ingredients = element.recipe.ingredientLines;
   const cusineType = element.recipe.cuisineType;
   const recipe = element.recipe.url;
   const calories = element.recipe.calories;
@@ -51,11 +74,35 @@ const RecipeCard = ({ element }) => {
   const caloriesPerServing = Math.floor(calories / servingSize);
 
   const handleClick = () => {
-    setModal(!modal);
+    setShowModal(!showModal);
   };
+
+  const arrayOfString = ingredients;
+  const ingredient = arrayOfString.map((item, index) => (
+    <Labels item={item} index={index} />
+  ));
+
+  let modal;
+
+  if (showModal) {
+    modal = (
+      <Modal onClick={handleClick}>
+        <StyledInformation>
+          <span className="recipeName">
+            Recipe Name: {recipeName}
+          </span>
+          <br />
+          <span className="message">Ingredients: </span>
+          <br />
+          {ingredient}
+        </StyledInformation>
+      </Modal>
+    );
+  }
 
   return (
     <Container>
+      {modal}
       <span className="recipeName">{recipeName}</span>
       <br />
       <Img src={image} onClick={handleClick} />

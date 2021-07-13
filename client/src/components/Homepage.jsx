@@ -34,7 +34,7 @@ const Form = styled.form`
   border-radius: 22px;
   background-color: white;
   min-width: 30%;
-  min-heigh: 30%;
+  min-height: 30%;
   left: 50%;
   top: 50%;
   padding: 20px;
@@ -74,7 +74,6 @@ const RowContainer = styled.div`
 
 const recipes = () => {
   const [ingredients, setIngredients] = useState([]);
-  const [name, setName] = useState('+');
   const [showModal, setShowModal] = useState(false);
   const [inputs, setInputs] = useState({});
 
@@ -115,7 +114,6 @@ const recipes = () => {
   return (
     <>
       {modal}
-
       <Container>
         <ReactPlayer url="https://www.youtube.com/watch?v=9i4SKHbhbqk" />
         <br />

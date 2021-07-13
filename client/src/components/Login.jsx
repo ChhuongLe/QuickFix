@@ -60,7 +60,7 @@ const Login = ({ setScreen, createAccount }) => {
   const [create, setCreate] = useState(false);
 
   const handleSubmit = () => {
-    setScreen('ingredientScreen');
+    setScreen('homePage');
     setLoggedIn(!loggedIn);
   };
 

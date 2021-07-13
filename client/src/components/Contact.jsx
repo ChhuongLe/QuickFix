@@ -7,7 +7,13 @@ const FormContainer = styled.div`
   flex-direction: column;
 `;
 
-const Contact = () => {
-};
+const Contact = () => (
+  <div>
+    <FormContainer>
+      <div>Hello</div>
+    </FormContainer>
+  </div>
+
+);
 
 export default Contact;

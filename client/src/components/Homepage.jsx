@@ -7,14 +7,34 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  border-radius: 10px;
   right: 0;
   left: 0;
+  margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
   width: 50vw;
-  height: 50vh;
+  height: 40vh;
+  background-color: white;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.3);
+  .player{
+    margin-left: 18%;
+    margin-top: 70px;
   }
+  .message{
+    margin-left: 20%;
+    margin-bottom: 20%;
+  }
+`;
+
+const Header = styled.h1`
+  left:0;
+  right:0;
+  margin-left: 45%;
+  margin-right: 50%;
+  margin-top: 20px;
+  width: 50vw;
 `;
 
 const Modal = styled.div`
@@ -114,8 +134,10 @@ const recipes = () => {
   return (
     <>
       {modal}
+      <Header>Home page</Header>
       <Container>
-        <ReactPlayer url="https://www.youtube.com/watch?v=9i4SKHbhbqk" />
+        <ReactPlayer className="player" url="https://www.youtube.com/watch?v=9i4SKHbhbqk" width="416px" height="300px" />
+        <br />
         <br />
         <div className="message">Fast Food Done Right with Gordon Ramsay</div>
       </Container>

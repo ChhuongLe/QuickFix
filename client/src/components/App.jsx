@@ -7,23 +7,27 @@ import Navbar from './Navbar';
 import Homepage from './Homepage';
 import Recipes from './Recipes';
 import Create from './Create';
+import MakeDish from './MakeDish';
+import Contact from './Contact';
 
 const Container = styled.div`
   background-color: #77DD77;
   height: 100vh;
-  width: 100vw;
+  width: 100 vw;
 `;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userName: '',
       chickenRecipes: [],
       screen: 'loginScreen',
     };
     this.setScreen = this.setScreen.bind(this);
     this.createAccount = this.createAccount.bind(this);
     this.getChickenRecipes = this.getChickenRecipes.bind(this);
+    this.setUserName = this.setUserName.bind(this);
   }
 
   componentDidMount() {
@@ -54,8 +58,14 @@ class App extends React.Component {
     });
   }
 
+  setUserName(value) {
+    this.setState({
+      userName: value,
+    });
+  }
+
   render() {
-    const { screen, chickenRecipes } = this.state;
+    const { screen, chickenRecipes, userName } = this.state;
     if (screen === 'registerScreen') {
       return (
         <Container>
@@ -66,21 +76,53 @@ class App extends React.Component {
     if (screen === 'loginScreen') {
       return (
         <Container>
-          <Login setScreen={this.setScreen} createAccount={this.createAccount} />
+          <Login
+            setScreen={this.setScreen}
+            createAccount={this.createAccount}
+            setUser={this.setUserName}
+          />
         </Container>
       );
     }
     if (screen === 'recipesScreen') {
       return (
         <Container>
-          <Navbar setScreen={this.setScreen} />
+          <Navbar
+            userName={userName}
+            setScreen={this.setScreen}
+          />
           <Recipes chickenRecipes={chickenRecipes} />
+        </Container>
+      );
+    }
+    if (screen === 'maker') {
+      return (
+        <Container>
+          <Navbar
+            userName={userName}
+            setScreen={this.setScreen}
+          />
+          <MakeDish />
+        </Container>
+      );
+    }
+    if (screen === 'contact') {
+      return (
+        <Container>
+          <Navbar
+            userName={userName}
+            setScreen={this.setScreen}
+          />
+          <Contact />
         </Container>
       );
     }
     return (
       <Container>
-        <Navbar setScreen={this.setScreen} />
+        <Navbar
+          userName={userName}
+          setScreen={this.setScreen}
+        />
         <Homepage />
       </Container>
     );

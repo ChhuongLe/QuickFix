@@ -53,7 +53,7 @@ const Form = styled.form`
   }
 `;
 
-const Login = ({ setScreen, createAccount }) => {
+const Login = ({ setScreen, createAccount, setUser }) => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
@@ -69,6 +69,11 @@ const Login = ({ setScreen, createAccount }) => {
     setCreate(!create);
   };
 
+  const handleChange = (event) => {
+    setUserName(event.target.value);
+    setUser(userName);
+  };
+
   return (
     <div>
       <Header>Sign in</Header>
@@ -78,7 +83,7 @@ const Login = ({ setScreen, createAccount }) => {
             <br />
             <br />
             <label className="username">Username: </label>
-            <input className="textBox" type="username" placeholder="Username" required />
+            <input className="textBox" type="username" placeholder="Username" onChange={handleChange} required />
             <br />
             <br />
             <br />

@@ -89,7 +89,7 @@ const RecipeCard = ({ element }) => {
       <Modal onClick={handleClick}>
         <StyledInformation>
           <span className="recipeName">
-            Recipe Name: {recipeName}
+            Recipe: {recipeName}
           </span>
           <br />
           <span className="message">Ingredients: </span>

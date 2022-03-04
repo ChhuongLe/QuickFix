@@ -1,9 +1,9 @@
 const axios = require('axios');
 const config = require('../../config');
 
-const getChicken = (callback) => {
+const getDefault = (callback) => {
   const options = {
-    url: `${config.url}&app_id=${config.app_id}&app_key=${config.app_key}&q=chicken`,
+    url: `${config.url}?apiKey=${app_key}&ingredients=apples`,
   };
   axios(options)
     .then((res) => {
@@ -53,7 +53,7 @@ const getVegetarian = (callback) => {
     });
 };
 module.exports = {
-  getChicken,
+  getDefault,
   getBeef,
   getVegan,
   getVegetarian,

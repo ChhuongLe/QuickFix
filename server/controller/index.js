@@ -3,10 +3,11 @@ const helpers = require('../router');
 
 const router = express.Router();
 
-router.get('/chicken', (req, res) => {
-  helpers.getChicken((err, data) => {
+router.get('/default', (req, res) => {
+  helpers.getDefault((err, data) => {
     if (err) {
       res.send(err);
+      console.log('something went wrong');
     } else {
       res.status(200).send(data);
     }

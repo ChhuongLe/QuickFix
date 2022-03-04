@@ -34,7 +34,6 @@ margin-top: -4%;
 
 const Navbar = ({ setScreen, userName }) => {
   const [page, setPage] = useState('');
-  console.log(userName);
 
   const handleClick = (event) => {
     const target = event.target.innerText;

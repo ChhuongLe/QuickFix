@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import {
+  Nav,
+  NavLink,
+  NavMenu,
+  StyledImage } from './NavbarElements.js';
+import Icon from '../../image/Icon.png';
 
 const Container = styled.div`
+  background-color: #bbc3d4;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -14,8 +21,6 @@ const ButtonContainer = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: right;
-margin-left: 55%;
-margin-top: -4%;
 .nav{
   background-color: transparent;
   border: none;
@@ -107,16 +112,12 @@ const Navbar = ({ setScreen, userName }) => {
   }
 
   return (
-    <div>
-      <Container>
-        <div className="navBar">
-          <span>QuickFix</span>
-        </div>
-      </Container>
-      {buttons}
-    </div>
-
-
+    <Nav>
+      <NavLink to='/'><StyledImage src={ Icon }/></NavLink>
+      <NavMenu>
+        <NavLink to='/contact'>Contact Us</NavLink>
+      </NavMenu>
+    </Nav>
   );
 };
 

@@ -133,13 +133,9 @@ const recipes = () => {
 
   return (
     <>
-      {modal}
       <Header>Home page</Header>
       <Container>
-        <ReactPlayer className="player" url="https://www.youtube.com/watch?v=9i4SKHbhbqk" width="416px" height="300px" />
-        <br />
-        <br />
-        <div className="message">Fast Food Done Right with Gordon Ramsay</div>
+        
       </Container>
     </>
   );

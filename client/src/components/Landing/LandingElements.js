@@ -21,8 +21,10 @@ export const BannerImg = styled.img`
 export const BannerText = styled.div`
   position: absolute;
   color: white;
-  font-size: 25px;
+  font-family: 'Marck Script', cursive;
+  font-size: 45px;
   top: 50%;
   bottom: 50%;
+  transform(-50%, -50%);
   cursor: pointer;
 `;

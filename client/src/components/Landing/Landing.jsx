@@ -11,7 +11,7 @@ const Landing = () => {
     <Container>
       <Banner>
         <BannerImg src={fridge}/>
-        <BannerText>Looking for a <br />Quick Fix?</BannerText>
+        <BannerText>Looking for a <br/>Quick Fix?</BannerText>
       </Banner>
     </Container>
   );

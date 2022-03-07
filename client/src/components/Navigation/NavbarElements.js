@@ -2,19 +2,20 @@ import styled from 'styled-components';
 import {NavLink as Link} from 'react-router-dom';
 
 export const Nav = styled.div`
-  background: #bbc3d4;
+  background: #F4ECE2;
   height: 120px;
   display flex;
 `;
 
 export const NavLink = styled(Link)`
-  background: #bbc3d4;
+  background: #F4ECE2;
   display: flex;
   cursor: pointer;
   height: 100%;
   text-decoration: none !important;
+  color: black;
   &.active {
-    color: #E39774;
+    color: #849483;
   }
   align-items: center;
 `;
@@ -31,5 +32,5 @@ export const NavMenu = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-left: 150px;
+  margin-left: 150px;0
 `;

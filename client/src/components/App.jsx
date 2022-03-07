@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import Login from './Login';
 import Navbar from './Navigation/Navbar';
-import Homepage from './Homepage';
+import Landing from './Landing/Landing';
 import Recipes from './Recipes';
 import Create from './Create';
 import MakeDish from './MakeDish';
@@ -24,7 +24,7 @@ function App () {
       <Router>
         <Navbar userName = {username}/>
           <Routes>
-            <Route path = "/" element ={<Homepage />} />
+            <Route path = "/" element ={<Landing />} />
             <Route path = "/contact" element ={<Contact />} />
           </Routes>
       </Router>

@@ -59,74 +59,16 @@ const StyledInformation = styled.div`
   }
 `;
 
-const RecipeCard = ({ element }) => {
+const RecipeCard = ({ recipe }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const recipeName = element.recipe.label;
-  const image = element.recipe.image;
-  // const healthLabels = element.recipe.healthLabels;
-  const ingredients = element.recipe.ingredientLines;
-  const cusineType = element.recipe.cuisineType;
-  const recipe = element.recipe.url;
-  const calories = element.recipe.calories;
-  const servingSize = element.recipe.yield;
+  const recipeTitle = recipe.title;
+  const recipeImg = recipe.image;
+  const recipeURL = recipe.soruceURL;
+  const recipeSummary = recipe.summary;
 
-  const caloriesPerServing = Math.floor(calories / servingSize);
-
-  const handleClick = () => {
-    setShowModal(!showModal);
-  };
-
-  const arrayOfString = ingredients;
-  const ingredient = arrayOfString.map((item, index) => (
-    <Labels item={item} index={index} />
-  ));
-
-  let modal;
-
-  if (showModal) {
-    modal = (
-      <Modal onClick={handleClick}>
-        <StyledInformation>
-          <span className="recipeName">
-            Recipe: {recipeName}
-          </span>
-          <br />
-          <span className="message">Ingredients: </span>
-          <br />
-          {ingredient}
-        </StyledInformation>
-      </Modal>
-    );
-  }
-
-  return (
-    <Container>
-      {modal}
-      <span className="recipeName">{recipeName}</span>
-      <br />
-      <Img src={image} onClick={handleClick} />
-      <br />
-      <br />
-      <div className="information">
-        <span className="cuisine">
-          Cusine Type: {cusineType}
-        </span>
-        <br />
-        <br />
-        <span className="serving">
-          serving size: {servingSize}
-        </span>
-        <br />
-        <br />
-        <span>
-          Calories Per Serving: {caloriesPerServing}
-        </span>
-        <br />
-        <br />
-        <a href={recipe}>Recipe Here</a>
-      </div>
-    </Container>
+  return(
+    <div>Yes</div>
   );
 };
 

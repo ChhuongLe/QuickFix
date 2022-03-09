@@ -18,9 +18,10 @@ const Container = styled.div`
   }
 `;
 
-const Recipes = () => {
+const Recipes = ({recipes}) => {
+
   return (
-    <div>This is the recipes stuffs</div>
+    <div>Want something that might fit your fancy?</div>
   )
 };
 

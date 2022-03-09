@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import styled, {createGlobalStyle} from 'styled-components';
 import axios from 'axios';
@@ -18,6 +18,24 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   const [username, setUsername] = useState('Guest');
+  const [data, setData] = useState([]);
+
+  const getDefault = () =>{
+    axios.get('/default')
+    .then((res)=>{
+      setData(res.data);
+    })
+    .catch((err)=>{
+      alert("Error getting data");
+    });
+  };
+
+  useEffect(() => {
+    getDefault();
+  }, []);
+
+
+
   return (
     <>
     <GlobalStyle/>
@@ -25,7 +43,7 @@ const App = () => {
         <Navbar userName = {username}/>
           <Routes>
             <Route path = "/" element ={<Landing />} />
-            <Route path = "/recipes" element = {<Recipes />} />
+            <Route path = "/recipes" element = {<Recipes recipes={data}/>} />
             <Route path = "/contact" element ={<Contact />} />
           </Routes>
       </Router>

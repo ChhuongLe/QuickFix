@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   background-color: #849483;
 }`;
 
-function App () {
+const App = () => {
   const [username, setUsername] = useState('Guest');
   return (
     <>
@@ -25,6 +25,7 @@ function App () {
         <Navbar userName = {username}/>
           <Routes>
             <Route path = "/" element ={<Landing />} />
+            <Route path = "/recipes" element = {<Recipes />} />
             <Route path = "/contact" element ={<Contact />} />
           </Routes>
       </Router>

@@ -3,14 +3,14 @@ const config = require('../../config');
 
 const getDefault = (callback) => {
   const options = {
-    url: `${config.url}?apiKey=${app_key}&ingredients=apples`,
+    url: `${config.url}&apiKey=${config.app_key}&tags=chicken`,
   };
   axios(options)
     .then((res) => {
-      callback(null, res.data.hits);
+      callback(null, res.data);
     })
     .catch((err) => {
-      callback(err, null);
+      callback(`ERROR: ${config.url}`, err);
     });
 };
 

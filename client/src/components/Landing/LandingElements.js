@@ -15,16 +15,20 @@ export const Banner = styled.div`
 
 export const BannerImg = styled.img`
   width: 100%;
-  filter: brightness(60%);
+  filter: brightness(70%);
 `;
 
 export const BannerText = styled.div`
+  background-color: rgba(0,0,0,0.5);
+  height: 100px;
+  width: 300px;
+  padding: 20px 0px 20px 0px;
+  border-radius: 10px;
   position: absolute;
   color: white;
   font-family: 'Marck Script', cursive;
   font-size: 45px;
-  top: 50%;
-  bottom: 50%;
-  transform(-50%, -50%);
+  top: 40%;
+  bottom: 60%;
   cursor: pointer;
 `;

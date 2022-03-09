@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import RecipeCard from './RecipeCard';
 
+// display popular recipes first
+// allow user to
+
 // Improvment: Make it so there are more options
 const Container = styled.div`
   display: flex;
@@ -15,21 +18,10 @@ const Container = styled.div`
   }
 `;
 
-const Recipes = (chickenRecipes) => {
-  const [modal, setModal] = useState(false);
-
-  const chickenArr = chickenRecipes.chickenRecipes;
-  console.log(chickenArr);
-
-  const recipeCards = chickenArr.map((element, index) => (
-    <RecipeCard element={element} key={index} />
-  ));
-
+const Recipes = () => {
   return (
-    <Container>
-      {recipeCards}
-    </Container>
-  );
+    <div>This is the recipes stuffs</div>
+  )
 };
 
 export default Recipes;

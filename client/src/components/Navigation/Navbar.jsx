@@ -13,7 +13,8 @@ const Navbar = ({ setScreen, userName }) => {
     <Nav>
       <NavLink to='/'><StyledImage src={ Icon }/></NavLink>
       <NavMenu>
-        <NavLink to='/contact'>Contact Us</NavLink>
+        <NavLink to ='/recipes'>Recipes </NavLink>
+        <NavLink to='/contact'> Contact Us</NavLink>
       </NavMenu>
     </Nav>
   );

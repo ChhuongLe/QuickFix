@@ -17,7 +17,11 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, '../public/dist')));
 app.use(bodyParser.json());
 
-app.use('/default', controller);
+// app.get('/default',(req, res)=>{
+//   res.send([1,2,3]);
+// })
+app.get('/default', controller);
+app.use('/beef', controller);
 
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);

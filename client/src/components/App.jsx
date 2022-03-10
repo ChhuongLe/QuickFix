@@ -7,7 +7,7 @@ import dummyData from '../../../sampleData.json';
 import Login from './Login';
 import Navbar from './Navigation/Navbar';
 import Landing from './Landing/Landing';
-import Recipes from './Recipes';
+import Recipes from './RecipeList/Recipes';
 import Create from './Create';
 import MakeDish from './MakeDish';
 import Contact from './Contact';

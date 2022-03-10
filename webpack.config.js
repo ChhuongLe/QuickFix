@@ -37,8 +37,5 @@ module.exports = {
     alias: {
       'react-native$': 'react-native-web',
     },
-  },
-  {
-    "plugins": ["@babel/plugin-transform-runtime"]
   }
 };

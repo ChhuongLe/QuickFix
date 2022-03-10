@@ -1,22 +1,10 @@
 import React, { useState } from 'react';
+import { Container } from './RecipeElements.js';
 import styled from 'styled-components';
-import RecipeCard from './RecipeCard';
+import RecipeCard from '../RecipeCard/RecipeCard';
 
 // display popular recipes first
 // allow user to
-
-// Improvment: Make it so there are more options
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  width: 100vw;
-  height: 87vh;
-  overflow:hidden;
-  margin-top: 13px;
-  }
-`;
 
 
 // given some recipes that are default to show
@@ -28,10 +16,9 @@ const Recipes = ({recipes}) => {
   ));
 
   return (
-    <>
-      <div>Want something that might fit your fancy?</div>
-      <div>{randoRecipes}</div>
-    </>
+    <Container>
+      {randoRecipes}
+    </Container>
   )
 };
 export default Recipes;

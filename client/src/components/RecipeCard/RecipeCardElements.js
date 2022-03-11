@@ -4,8 +4,8 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 15%;
+  height: 225px;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
@@ -30,4 +30,5 @@ export const StyledHeading = styled.h3`
 
 export const StyledImage = styled.img`
   border-radius: 20px;
+  max-width: 90%;
 `;

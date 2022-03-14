@@ -6,7 +6,7 @@ import {
 import noImage from '../../image/notAvailable.gif';
 
 const RecipeCard = ({ recipe }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [shown, setShown] = useState(false);
 
   const recipeTitle = recipe.title;
   const recipeImg = recipe.image;
@@ -21,11 +21,20 @@ const RecipeCard = ({ recipe }) => {
     return image;
   }
 
+  const handleHover = () =>{
+    setShown(!shown);
+  }
+
   return(
-    <CardContainer>
-      <StyledHeading>{recipeTitle}</StyledHeading>
+    <CardContainer
+    onMouseEnter={()=>setShown(true)}
+    onMouseLeave={()=>setShown(false)}
+    >
       <StyledImage src = {isValidImage(recipeImg)} />
-      </CardContainer>
+      {shown && (
+        <StyledHeading>{recipeTitle}</StyledHeading>
+      )}
+    </CardContainer>
   );
 };
 

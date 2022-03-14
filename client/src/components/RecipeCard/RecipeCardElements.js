@@ -3,32 +3,28 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 15%;
-  height: 225px;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  padding: 14px;
-  margin: 1rem;
-  background-color: #BA6F4D;
-  box-shadow:  0 3px 10px rgb(0 0 0 / 0.3);
-  :hover {
+  :hover{
     cursor: pointer;
   }
-  .recipeName{
-    font-size: 20px;
-  }
-  text-align: center;
+  height: 1em;
+  width: 100%;
 `;
 
-export const StyledHeading = styled.h3`
-  background-color: #BA6F4D;
+export const StyledHeading = styled.div`
   font-size: 1em;
   color: white;
+  background: rgba(0,0,0,0);
+  position: absolute;
+  width: 20%;
+  overflow-wrap: normal;
 `;
 
 export const StyledImage = styled.img`
-  border-radius: 20px;
-  max-width: 90%;
+  max-width: 95%;
+  transition: 0.25s ease-in-out;
+  :hover{
+    transition: 0.25s ease-in-out;
+    filter: brightness(65%);
+    transform: scale(1.5);
+  }
 `;

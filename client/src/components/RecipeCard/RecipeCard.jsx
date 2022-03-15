@@ -12,7 +12,7 @@ const RecipeCard = ({ recipe }) => {
   const recipeTitle = recipe.title;
   const recipeImg = recipe.image;
   const recipeURL = recipe.soruceURL;
-  const recipeSummary = recipe.summary;
+  const recipeSummary = (recipe.summary);
 
   // checks if there is a valid image
   const isValidImage = (image) => {

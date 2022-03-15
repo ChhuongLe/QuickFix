@@ -33,4 +33,5 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #FFF;
-  `;
+  max-width: 95%;
+`;

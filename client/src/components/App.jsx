@@ -4,7 +4,7 @@ import styled, {createGlobalStyle} from 'styled-components';
 import axios from 'axios';
 
 import dummyData from '../../../sampleData.json';
-import Login from './Login';
+import Login from './Login/Login';
 import Navbar from './Navigation/Navbar';
 import Landing from './Landing/Landing';
 import Recipes from './RecipeList/Recipes';

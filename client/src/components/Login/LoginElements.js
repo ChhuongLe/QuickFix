@@ -17,16 +17,9 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   display: flex;
-  poisition: relative;
-  border-radius: 10px;
   flex-direciton: column;
   justify-content: center;
-  margin-top: 100px;
-  margin-left: 25%;
-  width: 50vw;
-  height: 40vh;
-  padding: 20px;
-  box-shadow:  0 3px 10px rgb(0 0 0 / 0.3);
+  background-color: #FFF;
   .username{
     font-size: 1.1em;
     padding: 12px;

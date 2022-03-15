@@ -27,28 +27,13 @@ const Login = ({ setScreen, createAccount, setUser }) => {
       <Header>Sign in</Header>
       <Container>
         <Form className="login" onSubmit={handleSubmit}>
-          <div>
-            <br />
-            <br />
             <label className="username">Username: </label>
             <input className="textBox" type="username" placeholder="Username" onChange={handleChange} required />
-            <br />
-            <br />
-            <br />
-            <br />
             <label className="password"> Password: </label>
             <input className="textBox" type="password" placeholder="Password" required />
-            <br />
-            <br />
             <button className="submit">Submit</button>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <p className="message">Not Registered?</p>
             <button className="submit" onClick={handleCreate}>Create an account</button>
-          </div>
         </Form>
       </Container>
     </div>

@@ -10,7 +10,7 @@ import Landing from './Landing/Landing';
 import Recipes from './RecipeList/Recipes';
 import Create from './Create';
 import MakeDish from './MakeDish';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 
 const GlobalStyle = createGlobalStyle`
 * {

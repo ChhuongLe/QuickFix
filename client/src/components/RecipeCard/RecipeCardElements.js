@@ -28,3 +28,9 @@ export const StyledImage = styled.img`
     transform: scale(1.5);
   }
 `;
+
+export const Modal = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  `;

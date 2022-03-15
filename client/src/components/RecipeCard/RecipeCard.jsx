@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import {
   CardContainer,
   StyledHeading,
-  StyledImage } from './RecipeCardElements.js';
+  StyledImage,
+  Modal } from './RecipeCardElements.js';
 import noImage from '../../image/notAvailable.gif';
 
 const RecipeCard = ({ recipe }) => {
   const [shown, setShown] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   const recipeTitle = recipe.title;
   const recipeImg = recipe.image;
   const recipeURL = recipe.soruceURL;
@@ -29,10 +30,16 @@ const RecipeCard = ({ recipe }) => {
     <CardContainer
     onMouseEnter={()=>setShown(true)}
     onMouseLeave={()=>setShown(false)}
+    onClick={()=>setShowModal(!showModal)}
     >
       <StyledImage src = {isValidImage(recipeImg)} />
       {shown && (
         <StyledHeading>{recipeTitle}</StyledHeading>
+      )}
+      {showModal && (
+        <Modal>
+          {recipeSummary}
+        </Modal>
       )}
     </CardContainer>
   );

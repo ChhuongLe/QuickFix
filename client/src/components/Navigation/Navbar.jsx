@@ -15,6 +15,8 @@ const Navbar = ({ setScreen, userName }) => {
       <NavMenu>
         <NavLink to ='/recipes'>Recipes </NavLink>
         <NavLink to='/contact'> Contact Us</NavLink>
+        <NavLink to='/dish'>Create a Dish</NavLink>
+        <NavLink to='/login'>Login</NavLink>
       </NavMenu>
     </Nav>
   );

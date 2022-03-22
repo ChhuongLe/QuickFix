@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const MakeDish = () => (
   <div>
-    Put something in here ya dingus
+    Put something in here
   </div>
 );
 

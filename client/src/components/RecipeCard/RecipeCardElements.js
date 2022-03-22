@@ -29,9 +29,27 @@ export const StyledImage = styled.img`
   }
 `;
 
+export const ModalBackground = styled.div`
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  rigth: 0;
+  height: 100%;
+  transition-duration: 4s;
+`;
+
 export const Modal = styled.div`
   display: flex;
-  flex-direction: column;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  padding: 20px;
   background-color: #FFF;
-  max-width: 95%;
+  transform: translate(50%, 25%);
 `;

@@ -3,6 +3,7 @@ import {
   CardContainer,
   StyledHeading,
   StyledImage,
+  ModalBackground,
   Modal } from './RecipeCardElements.js';
 import noImage from '../../image/notAvailable.gif';
 
@@ -37,9 +38,9 @@ const RecipeCard = ({ recipe }) => {
         <StyledHeading>{recipeTitle}</StyledHeading>
       )}
       {showModal && (
-        <Modal>
-          {recipeSummary}
-        </Modal>
+        <ModalBackground>
+          <Modal>{recipeSummary}</Modal>
+        </ModalBackground>
       )}
     </CardContainer>
   );

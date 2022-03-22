@@ -9,6 +9,10 @@ QuickFix is still currently under development.
 - Contact us page is still under development to be connected to EmailJS where users can send comments/concerns to an email.
 - Recipes grabbed currently are only 5 random recipes
 
+## Next Steps
+- I want to be able to add a search bar to allow users to input ingredients that they want to use for their next dish. 
+- Add a login system so that users can view favorited recipes and recent dishes made
+
 ## Project Screen Shot(s)
 
 ![image](https://user-images.githubusercontent.com/77046302/159387732-a92d3e9e-4268-494f-9213-cb6b27ce57c4.png)

@@ -62,7 +62,7 @@ export const Modal = styled.div`
   padding: 20px;
   background-color: #FFF;
   transform: translate(50%, 0%);
-  transition: 0.25s fade-in-out;
+  transition: 0.25s ease-in-out;
   overflow: scroll;
   border-radius: 20px;
   &::-webkit-scrollbar{
@@ -76,6 +76,7 @@ export const Recipe = styled.div`
   background-color: #FFF;
   margin-top: 20px;
   border: 2px solid black;
+  border-radius: 20px;
 `;
 
 export const ExitButton = styled.button`

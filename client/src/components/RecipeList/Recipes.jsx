@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from './RecipeElements.js';
+import { Header } from '../Login/LoginElements.js';
 import styled from 'styled-components';
 import RecipeCard from '../RecipeCard/RecipeCard';
 
@@ -16,9 +17,13 @@ const Recipes = ({recipes}) => {
   ));
 
   return (
-    <Container>
-      {randoRecipes}
-    </Container>
+    <div>
+      <Header style={{marginTop: "30px"}}>Recipes of the day: </Header>
+      <Container>
+        {randoRecipes}
+      </Container>
+    </div>
+
   )
 };
 export default Recipes;

@@ -33,6 +33,12 @@ const RecipeCard = ({ recipe }) => {
   const handleHover = () =>{
     setShown(!shown);
   }
+
+  // ingredients list is a little confusing, will implement at a later time
+
+  // let ingr = recipeInstructions.map((el,i)=>{ return el.ingredients[0] });
+  // console.log(ingr);
+
   return(
     <CardContainer
     onMouseEnter={()=>setShown(true)}
@@ -43,6 +49,7 @@ const RecipeCard = ({ recipe }) => {
         <StyledHeading>{recipeTitle}</StyledHeading>
       )}
       {showModal && (
+        // add scroll to top functionality for QoL
         <ModalBackground>
           <Modal>
             <ExitButton onClick={()=>{setShowModal(!showModal); setShown(false)}}>X</ExitButton>
@@ -58,7 +65,7 @@ const RecipeCard = ({ recipe }) => {
               <h3 style={{backgroundColor: "#A2A182"}}>Instructions:</h3>
               <ol style={{backgroundColor:"#FFF"}}>
                 {recipeInstructions.map((el,i)=>{
-                  return <li style={{backgroundColor: "#FFF"}}key={i}>{el.step}</li>
+                  return <li style={{backgroundColor: "#FFF"}} key={i}>{el.step}</li>
                 })}
               </ol>
             </Recipe>

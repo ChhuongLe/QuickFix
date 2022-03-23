@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
   display: flex;
-  position: relative;
+  position: fixed;
   flex-direction: column;
   background-color: white;
   justify-content: center;
@@ -16,6 +16,7 @@ export const FormContainer = styled.div`
 
 export const StyledForm = styled.form`
   background-color: #FFF;
+  margin-left: 23%;
   .textBox {
     padding: 10px;
     background-color: #FFF;
@@ -24,6 +25,7 @@ export const StyledForm = styled.form`
     padding: 10px;
     width: 25vw;
     background-color: rgb(234 162 162/ 0.7) ;
+    margin-left: 5%;
     border-radius: 20px;
     :hover {
       cursor: pointer;

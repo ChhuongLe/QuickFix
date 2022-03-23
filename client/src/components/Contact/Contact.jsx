@@ -1,11 +1,14 @@
 import React from 'react';
+import { Header } from '../Login/LoginElements.js';
 import { FormContainer, StyledForm } from './ContactElements';
 
 
 
 const Contact = () => (
-  <FormContainer>
-    <StyledForm>
+  <div>
+    <Header>Contact Me!</Header>
+    <FormContainer>
+      <StyledForm>
       <label className="label">Name: </label>
       <input className="textBox" />
       <br />
@@ -17,12 +20,13 @@ const Contact = () => (
       <br />
       <br />
       <label className="label">Message: </label>
-      <textarea className="area" rows="5" cols="25"/>
+      <textarea placeholder="Questions and feedback are appreciated!" className="area" rows="5" cols="25"/>
       <br />
       <br />
       <button className="submit">Submit</button>
     </StyledForm>
   </FormContainer>
+  </div>
 );
 
 export default Contact;

@@ -31,7 +31,6 @@ export const StyledImage = styled.img`
 
 export const ModalImage = styled.img`
   max-width: 30%;
-  margin-top: 30px;
 `;
 
 export const ModalBackground = styled.div`
@@ -53,7 +52,6 @@ export const ModalBackground = styled.div`
 `;
 
 export const Modal = styled.div`
-  justify-content: center;
   display: flex;
   flex-direction: Column;
   z-index: 2;
@@ -66,6 +64,10 @@ export const Modal = styled.div`
   transform: translate(50%, 0%);
   transition: 0.25s fade-in-out;
   overflow: scroll;
+  border-radius: 20px;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 `;
 
 export const Recipe = styled.div`

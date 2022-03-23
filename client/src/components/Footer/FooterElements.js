@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FootContainer = styled.div`
-  background-color: #FFF;
+  background-color: #F4ECE2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

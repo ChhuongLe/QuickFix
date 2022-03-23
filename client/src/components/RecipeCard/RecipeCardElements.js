@@ -40,11 +40,17 @@ export const ModalBackground = styled.div`
   left: 0;
   rigth: 0;
   height: 100%;
+  width: 100%;
   transition-duration: 4s;
+  :hover{
+    pointer: none;
+  }
 `;
 
 export const Modal = styled.div`
+  justify-content: center;
   display: flex;
+  flex-direction: row;
   z-index: 2;
   left: 50%;
   top: 50%;
@@ -52,4 +58,27 @@ export const Modal = styled.div`
   padding: 20px;
   background-color: #FFF;
   transform: translate(50%, 25%);
+`;
+
+export const Recipe = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  margin-top: 20px;
+  border: 2px solid black;
+`;
+
+export const ExitButton = styled.button`
+  background-color: #F4ECE2;
+  border: none;
+  background: none;
+  :hover{
+    cursor: pointer;
+  }
+  position: fixed;
+  left: 90%;
+`;
+
+export const LinkUrl = styled.a`
+  background-color: #FFF;
 `;

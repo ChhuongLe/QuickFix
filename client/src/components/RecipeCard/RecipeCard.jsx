@@ -4,7 +4,10 @@ import {
   StyledHeading,
   StyledImage,
   ModalBackground,
-  Modal } from './RecipeCardElements.js';
+  Modal,
+  Recipe,
+  ExitButton,
+  LinkUrl } from './RecipeCardElements.js';
 import noImage from '../../image/notAvailable.gif';
 
 const RecipeCard = ({ recipe }) => {
@@ -12,8 +15,10 @@ const RecipeCard = ({ recipe }) => {
   const [showModal, setShowModal] = useState(false);
   const recipeTitle = recipe.title;
   const recipeImg = recipe.image;
-  const recipeURL = recipe.soruceURL;
-  const recipeSummary = (recipe.summary);
+  const recipeURL = recipe.sourceUrl;
+  const recipeServing = recipe.servings;
+  const recipePrice = recipe.pricePerServing;
+  const recipeTime = recipe.readyInMinutes;
 
   // checks if there is a valid image
   const isValidImage = (image) => {
@@ -31,15 +36,23 @@ const RecipeCard = ({ recipe }) => {
     <CardContainer
     onMouseEnter={()=>setShown(true)}
     onMouseLeave={()=>setShown(false)}
-    onClick={()=>setShowModal(!showModal)}
     >
-      <StyledImage src = {isValidImage(recipeImg)} />
+      <StyledImage src = {isValidImage(recipeImg)} onClick={()=>setShowModal(!showModal)}/>
       {shown && (
         <StyledHeading>{recipeTitle}</StyledHeading>
       )}
       {showModal && (
         <ModalBackground>
-          <Modal>{recipeSummary}</Modal>
+
+          <Modal>
+            <ExitButton onClick={()=>{setShowModal(!showModal); setShown(false)}}>X</ExitButton>
+            <Recipe>
+              Number of servings: {recipeServing}<br/>
+              Price per serving: {recipePrice}<br/>
+              Time to make: {recipeTime} mins<br/>
+              Recipe URL:  <LinkUrl href={recipeURL} target="blank">Link</LinkUrl>
+            </Recipe>
+          </Modal>
         </ModalBackground>
       )}
     </CardContainer>

@@ -29,6 +29,11 @@ export const StyledImage = styled.img`
   }
 `;
 
+export const ModalImage = styled.img`
+  max-width: 30%;
+  margin-top: 30px;
+`;
+
 export const ModalBackground = styled.div`
   display: flex;
   z-index: 1;
@@ -50,14 +55,17 @@ export const ModalBackground = styled.div`
 export const Modal = styled.div`
   justify-content: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: Column;
   z-index: 2;
   left: 50%;
   top: 50%;
   width: 50%;
+  height: 90%;
   padding: 20px;
   background-color: #FFF;
-  transform: translate(50%, 25%);
+  transform: translate(50%, 0%);
+  transition: 0.25s fade-in-out;
+  overflow: scroll;
 `;
 
 export const Recipe = styled.div`
@@ -76,9 +84,11 @@ export const ExitButton = styled.button`
     cursor: pointer;
   }
   position: fixed;
-  left: 90%;
+  left: 96%;
+  top: 1%;
 `;
 
 export const LinkUrl = styled.a`
   background-color: #FFF;
+  display: inline;
 `;

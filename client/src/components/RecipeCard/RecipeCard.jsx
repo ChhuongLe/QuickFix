@@ -3,6 +3,7 @@ import {
   CardContainer,
   StyledHeading,
   StyledImage,
+  ModalImage,
   ModalBackground,
   Modal,
   Recipe,
@@ -19,6 +20,7 @@ const RecipeCard = ({ recipe }) => {
   const recipeServing = recipe.servings;
   const recipePrice = recipe.pricePerServing;
   const recipeTime = recipe.readyInMinutes;
+  const recipeInstructions = recipe.analyzedInstructions[0].steps;
 
   // checks if there is a valid image
   const isValidImage = (image) => {
@@ -31,7 +33,6 @@ const RecipeCard = ({ recipe }) => {
   const handleHover = () =>{
     setShown(!shown);
   }
-
   return(
     <CardContainer
     onMouseEnter={()=>setShown(true)}
@@ -43,14 +44,23 @@ const RecipeCard = ({ recipe }) => {
       )}
       {showModal && (
         <ModalBackground>
-
           <Modal>
             <ExitButton onClick={()=>{setShowModal(!showModal); setShown(false)}}>X</ExitButton>
+            <ModalImage src={recipeImg}/>
             <Recipe>
-              Number of servings: {recipeServing}<br/>
-              Price per serving: {recipePrice}<br/>
-              Time to make: {recipeTime} mins<br/>
-              Recipe URL:  <LinkUrl href={recipeURL} target="blank">Link</LinkUrl>
+              <h3 style={{backgroundColor: "#A2A182"}}>Description:</h3>
+              <ul style={{backgroundColor: "#FFF"}}>
+                <li style={{backgroundColor: "#FFF"}}>Number of servings: {recipeServing}</li>
+                <li style={{backgroundColor: "#FFF"}}>Price per serving: {recipePrice}</li>
+                <li style={{backgroundColor: "#FFF"}}>Time to make: {recipeTime} mins</li>
+                <li style={{backgroundColor: "#FFF"}}>Recipe URL:  <LinkUrl href={recipeURL} target="blank">Link</LinkUrl></li>
+              </ul>
+              <h3 style={{backgroundColor: "#A2A182"}}>Instructions:</h3>
+              <ol style={{backgroundColor:"#FFF"}}>
+                {recipeInstructions.map((el,i)=>{
+                  return <li style={{backgroundColor: "#FFF"}}key={i}>{el.step}</li>
+                })}
+              </ol>
             </Recipe>
           </Modal>
         </ModalBackground>

@@ -15,7 +15,7 @@ QuickFix is still currently under development.
 
 ## Project Screen Shot(s)
 
-![image](https://user-images.githubusercontent.com/77046302/159628676-ea6f620d-489e-4e87-9b98-ab31fc5e502e.png)
+![image](https://user-images.githubusercontent.com/77046302/159634707-210c3acf-8d74-42de-a5ce-1d56554d43f5.png)
 
 ![image](https://user-images.githubusercontent.com/77046302/159628749-33909936-5e4c-418d-b9d9-e4de1e39c030.png)
 

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 
@@ -11,6 +12,8 @@ export const Banner = styled.div`
   justify-content: center;
   position: relative;
   text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 `;
 
 export const BannerImg = styled.img`

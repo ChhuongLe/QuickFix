@@ -21,6 +21,7 @@ const App = () => {
   const [username, setUsername] = useState('Guest');
   const [data, setData] = useState([]);
 
+  // commented out to reserve API calls to spoonacular
   // const getDefault = () =>{
   //   axios.get('/default')
   //   .then((res)=>{

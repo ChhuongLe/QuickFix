@@ -35,7 +35,7 @@ export const ModalImage = styled.img`
 
 export const ModalBackground = styled.div`
   display: flex;
-  z-index: 1;
+  z-index: 10;
   flex-direction: column;
   background-color: rgba(0,0,0,0.4);
   position: absolute;
@@ -43,7 +43,7 @@ export const ModalBackground = styled.div`
   bottom: 0;
   left: 0;
   rigth: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   transition-duration: 4s;
   :hover{
@@ -54,11 +54,11 @@ export const ModalBackground = styled.div`
 export const Modal = styled.div`
   display: flex;
   flex-direction: Column;
-  z-index: 2;
+  z-index: 10;
   left: 50%;
-  top: 50%;
+  top: 0;
   width: 50%;
-  height: 90%;
+  height: 100vh;
   padding: 20px;
   background-color: #FFF;
   transform: translate(50%, 0%);

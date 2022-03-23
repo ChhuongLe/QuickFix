@@ -9,8 +9,9 @@ import Navbar from './Navigation/Navbar';
 import Landing from './Landing/Landing';
 import Recipes from './RecipeList/Recipes';
 import Create from './Create';
-import MakeDish from './MakeDish';
+import MakeDish from './MakeDish/MakeDish';
 import Contact from './Contact/Contact';
+import Footer from './Footer/Footer';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -56,6 +57,7 @@ const App = () => {
             <Route path = "/login" element={<Login />} />
           </Routes>
       </Router>
+      <Footer />
     </>
     );
 }

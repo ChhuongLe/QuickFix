@@ -21,6 +21,10 @@ QuickFix is still currently under development.
 
 ![image](https://user-images.githubusercontent.com/77046302/159628779-35de8a25-dd9d-4c15-a31a-d251bac2c708.png)
 
+![image](https://user-images.githubusercontent.com/77046302/159632489-cce02706-a875-463b-95fd-5584b348eb06.png)
+
+![image](https://user-images.githubusercontent.com/77046302/159632509-d4f30571-72c8-4f01-9980-5e06a3a77ddd.png)
+
 
 ## Installation and Setup Instructions
 Clone down this repository. You will require `node` and `npm` installed globally on your machine.

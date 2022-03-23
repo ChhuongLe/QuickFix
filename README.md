@@ -4,10 +4,10 @@ Built with React, Styled-Components, Express.js, Javascript, Firebase, and Postg
 
 ## Project Status
 QuickFix is still currently under development. 
-- As of right now, the front page displays two navigation elements that will allow users to navigate to the recipes page and contact us page.
+- As of right now, the front page displays four navigation elements that will allow users to navigate to the recipes, login, contact, and create dish pages
 - Recipes will display 5 random recipes that could potentially catch a user's liking 
 - Contact us page is still under development to be connected to EmailJS where users can send comments/concerns to an email.
-- Recipes grabbed currently are only 5 random recipes
+- Recipes grabbed currently are only 5 random recipes and allows users to click and view the details of each recipe of interest
 
 ## Next Steps
 - I want to be able to add a search bar to allow users to input ingredients that they want to use for their next dish. 
@@ -15,12 +15,11 @@ QuickFix is still currently under development.
 
 ## Project Screen Shot(s)
 
-![image](https://user-images.githubusercontent.com/77046302/159387732-a92d3e9e-4268-494f-9213-cb6b27ce57c4.png)
+![image](https://user-images.githubusercontent.com/77046302/159628676-ea6f620d-489e-4e87-9b98-ab31fc5e502e.png)
 
+![image](https://user-images.githubusercontent.com/77046302/159628749-33909936-5e4c-418d-b9d9-e4de1e39c030.png)
 
-![image](https://user-images.githubusercontent.com/77046302/159387787-19fbcc22-ac75-4cb2-a07c-3210e329c5a9.png)
-
-![image](https://user-images.githubusercontent.com/77046302/159387816-4f66a846-76e1-4f12-9d3e-5e66fb7fc356.png)
+![image](https://user-images.githubusercontent.com/77046302/159628779-35de8a25-dd9d-4c15-a31a-d251bac2c708.png)
 
 
 ## Installation and Setup Instructions
